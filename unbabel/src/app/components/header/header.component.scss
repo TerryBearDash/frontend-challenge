@@ -1,0 +1,31 @@
+@import '../../_variables';
+
+.header {
+  background-color: $white-background;
+  position: relative;
+  padding: 10px 30px;
+  box-shadow: 0 0 3px #ccc;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    h4 {
+      color: $app-title-color;
+      font-family: $app-title-font;
+      font-weight: $app-title-weight;
+      font-size: $app-title-size;
+      padding-left: 20px;
+    }
+
+    .btn-container {
+      padding: 0 10px;
+    }
+
+    .header-btn {
+      border: 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+
+<div class="translation-backdrop" [ngClass]="{ 'in': backdrop }" (click)="cancelDelete()"></div>
+<div class="translation-confirm"  [ngClass]="{ 'in': confirm }" (click)="cancelDelete()">
+  <div class="modal">
+    <p class="inline-title">Are you sure you want to delete this item?</p>
+    <div class="inline-text">This acion cannot be undone</div>
+    <div class="divider"></div>
+    <button class="save-btn" (click)="confirmDelete()">
+      Yes
+    </button>
+    <button class="cancel-btn" (click)="cancelDelete()">
+      No
+    </button>
+  </div>
+</div>

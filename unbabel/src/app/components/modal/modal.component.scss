@@ -1,0 +1,50 @@
+@import '../../_variables';
+
+.translation-backdrop {
+  display: block;
+  z-index: -999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden;
+  z-index: 10;
+
+  &.in {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all ease-in 0.4s;
+  }
+}
+
+.translation-confirm {
+  display: flex;
+  z-index: -999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden;
+  z-index: 12;
+  align-items: center;
+
+  .modal {
+    max-width: 320px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 0 auto;
+    padding: 40px;
+    top: -100vh;
+  }
+
+  &.in {
+    visibility: visible;
+
+    .modal {
+      top: auto;
+      transition: top ease-in 0.4s;
+    }
+  }
+}

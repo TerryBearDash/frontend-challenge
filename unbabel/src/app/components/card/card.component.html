@@ -1,0 +1,53 @@
+
+<div class="card">
+  <ng-container *ngIf="data.length > 0 || _data.length > 0">
+    <ul>
+      <li *ngFor="let l of data; let i = $index;">
+        <ng-container *ngIf="l.id">
+          <div class="pt">
+            <div class="page__toggle">
+              <label class="toggle">
+                <input class="toggle__input" type="checkbox">
+                <span class="toggle__label">
+                  <span class="toggle__text"></span>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <img src="assets/person.svg" class="person-img" />
+          </div>
+          <div class="pt">
+            <p class="inline-title">
+              {{l.voice}}
+            </p>
+            <div class="inline-text">
+              {{l.text}}
+            </div>
+          </div>
+          <button (click)="deleteRow(l.id)">
+            <img src="assets/delete.svg" class="btn-img" />
+          </button>
+        </ng-container>
+      </li>
+      <li *ngFor="let l of _data; let i = $index;">
+        <ng-container *ngIf="l.id === null">
+          <div>
+            <input class="inline-title" type="text" [(ngModel)]="l.voice" />
+            <input class="inline-text" type="text" [(ngModel)]="l.text" />
+            <button class="save-btn" (click)="saveRow(l)">Save</button>
+            <button class="cancel-btn" (click)="cancelRow()">Cancel</button>
+          </div>
+        </ng-container>
+      </li>
+    </ul>
+  </ng-container>
+  <ng-container *ngIf="data.length === 0">
+    <p>No Data Available</p>
+  </ng-container>
+  <div class="last-row">
+    <button (click)="addRow()">
+      <img src="assets/add-row.svg" class="btn-img" />
+    </button>
+  </div>
+</div>

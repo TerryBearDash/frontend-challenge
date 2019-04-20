@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Open+Sans:400');
+
+$body-font: 'Open Sans';
+
+// Checkbox Variables
+$white-background: #fff;
+$checkbox-border: #859EFF;
+$checkbox-checked: $checkbox-border;
+$checkbox-background-checked: #859EFF;
+$checkbox-dimensions: 10px;
+
+// Item Title Variables
+$item-title-color: #566074;
+$item-title-font: 'Montserrat';
+$item-title-weight: 600;
+$item-title-size: 16px;
+
+// Item Content
+$item-content-color: #778195;
+$item-content-font: 'Open Sans';
+$item-content-weight: 400;
+$item-content-size: 16px;
+
+// App Title
+$app-title-color: #414C5E;
+$app-title-font: 'Montserrat';
+$app-title-weight: 400;
+$app-title-size: 18px;
+
+// Media Breakpoints
+$view-xs: 320px;
+$view-sm: 480px;
+$view-md: 768px;
+$view-lg: 1200px;
+$view-xl: 1200px;
